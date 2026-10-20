@@ -20,9 +20,9 @@ public class GameModel
     public PlayerModel winner;
     // Rules
     //Table 
-    public GameModel(List<CardModel> card)
+    public GameModel(DeckModel deck)
     {
-        Deck = new DeckModel(card);
+      Deck = deck;
         _gameState = GameState.Waiting;
     }
 
@@ -49,5 +49,19 @@ public class GameModel
     public CardModel DrawCard()
     {
         return Deck.DrawCard();
+    }
+
+    public override string ToString()
+    {
+        string opt = "";
+        opt = "Player List \n";
+        for (int i = 0; i < _players.Count; i++)
+        {
+         opt=opt+_players[i].ToString()+"\n";   
+        }
+
+        opt = opt + "\n Deck Data "+Deck.ToString();
+        return opt;
+        
     }
 }

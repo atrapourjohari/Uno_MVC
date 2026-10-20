@@ -44,4 +44,9 @@ public class PlayerModel
         }
         return card;
     }
+
+    public override string ToString()
+    {
+        return "Player " + _name + " (" + _isHumane + ")";
+    }
 }

@@ -14,4 +14,10 @@ public class CardModel
         _cardValue = cardValue;
         
     }
+
+    public override string ToString()
+    {
+        string opt=$"Card Type :{_cardType} , Color :{_cardColor} , Value :{_cardValue}";
+        return opt;
+    }
 }

@@ -37,5 +37,15 @@ namespace Model.Deck
               _cardDeck[n] = card;
           }
       }
+
+      public override string ToString()
+      {
+          string output = "";
+          for (int i = 0; i < _cardDeck.Count; i++)
+          {
+              output = output + _cardDeck[i].ToString() +"\n";
+          }
+          return output;
+      }
     }
 }
